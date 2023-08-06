@@ -16,9 +16,9 @@ from NE_DATA_server import get_NE_DATA_server_functions
 from NE_DATA_ui_inputs import get_NE_DATA_inputs
 from NE_DATA_ui_outputs import get_NE_DATA_outputs
 
-from COLD_WAR_server import get_COLD_WAR_server_functions
-from COLD_WAR_ui_inputs import get_COLD_WAR_inputs
-from COLD_WAR_ui_outputs import get_COLD_WAR_outputs
+# from HEAT_MAP_server import get_COLD_WAR_server_functions
+# from HEAT_MAP_ui_inputs import get_COLD_WAR_inputs
+# from HEAT_MAP_ui_outputs import get_COLD_WAR_outputs
 
 from util_logger import setup_logger
 
@@ -65,13 +65,15 @@ ui.nav(
             get_NE_DATA_outputs(),
         ),
     ),
-ui.nav(
+#TODO Fix
+"""ui.nav(
         "Cold_War",
         ui.layout_sidebar(
+            #TODO Fix
             get_COLD_WAR_inputs(),
             get_COLD_WAR_outputs(),
         ),
-    ),
+    ),"""
 ui.nav(ui.a("About", href="https://github.com/WadeBryson")),
 ui.nav(ui.a("GitHub", href="https://github.com/WadeBryson/cintel-07-custom-app")),
 ui.nav(ui.a("App", href="https://wadebryson.shinyapps.io/cintel-07-custom-app/")),
@@ -82,7 +84,7 @@ def server(input, output, session):
 
     logger.info("Starting server...")
     get_NE_DATA_server_functions(input, output, session)
-    get_COLD_WAR_server_functions(input, output, session)
+    # get_HEAT_MAP_server_functions(input, output, session)
 
 # app = App(app_ui, server, debug=True)
 app = App(app_ui, server)
