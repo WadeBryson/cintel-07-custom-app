@@ -1,4 +1,4 @@
-# Purpose: Provide user interaction options for the Nuclear Explostions Heat Map.
+"""# Purpose: Provide user interaction options for the Nuclear Explostions Heat Map.
 
 from shiny import ui
 
@@ -27,4 +27,4 @@ def get_HEAT_MAP_inputs():
         ui.tags.hr(),
         ui.p("🕒 Please be patient. Outputs may take a few seconds to load."),
         ui.tags.hr(),
-    )
+    )"""

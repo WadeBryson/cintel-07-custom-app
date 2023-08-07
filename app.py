@@ -37,7 +37,6 @@ app_ui = ui.page_navbar(
                 ui.h4("Summer 2023 OP Block 2")
                 ),
                 ui.tags.hr(),
-                #TODO image here?
             ),
             ui.panel_main(
                 ui.h2("Nuclear Explosions Interactive Data"),

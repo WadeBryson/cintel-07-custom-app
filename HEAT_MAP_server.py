@@ -1,4 +1,4 @@
-# Purpose: Provide reactive output for the Nuclear Explosions Heat Map.
+""" Purpose: Provide reactive output for the Nuclear Explosions Heat Map.
 
 import pathlib
 
@@ -14,7 +14,7 @@ from util_logger import setup_logger
 logger, logname = setup_logger(__name__)
 
 def get_HEAT_MAP_server_functions(input, output, session):
-    """Define functions to create UI outputs."""
+    # Define functions to create UI outputs.
 
     p = pathlib.Path(__file__).parent.joinpath("data").joinpath("nuclear_explosions.csv")
     # logger.info(f"Reading data from {p}")
@@ -40,9 +40,9 @@ def get_HEAT_MAP_server_functions(input, output, session):
         input.HEAT_MAP_MIN_EXPLOSION
     )
     def _():
-        """Reactive effect to update the filtered dataframe when inputs change.
+        Reactive effect to update the filtered dataframe when inputs change.
         This is the only way to set a reactive value (after initialization).
-        It doesn't need a name, because no one calls it directly."""
+        It doesn't need a name, because no one calls it directly.
 
         df = original_df.copy()
 
@@ -109,4 +109,4 @@ def get_HEAT_MAP_server_functions(input, output, session):
         NE_DATA_record_count_string,
         NE_DATA_filtered_table,
         NE_DATA_output_widget1,
-    ]
+    ]"""

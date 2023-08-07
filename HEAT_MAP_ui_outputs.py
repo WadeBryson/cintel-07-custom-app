@@ -1,4 +1,4 @@
-# Purpose: Display output for Nuclear Explosions Heat Map.
+"""# Purpose: Display output for Nuclear Explosions Heat Map.
 
 from shiny import ui
 from shinywidgets import output_widget
@@ -16,4 +16,4 @@ def get_HEAT_MAP_outputs():
             ui.output_table("HEAT_MAP_filtered_table"),
             ui.tags.hr(),
         ),
-    )
+    )"""
